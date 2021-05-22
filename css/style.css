@@ -22,7 +22,7 @@ header {
     height: 100vh;
     grid-template-areas: 
         "header",
-        "nav"
+        "navi"
         "main";
 }
 
@@ -30,11 +30,27 @@ header {
     display: grid;
     height: 25vh;
     grid-template-columns: 1.5fr 1fr 2fr;
-    background-color: #F1FEEA;
+    background-color: #B5F792;
 }
 .bell {
-    margin: 10px 0 0 auto;
-    height: 30px;
+    margin: 18px -12px 0 0;
+    height: 20px;
+    width: 22px;
+}
+
+.nav-grid {
+    grid-area: 'navi';
+    display: grid;
+    text-align: center;
+    padding: 0 30px;
+    background-color: #57F900;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.nav-icon {
+    margin: 7px 0;
+    height: 25px;
     width: 25px;
 }
 

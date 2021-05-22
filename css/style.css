@@ -12,10 +12,6 @@ h1 {
     
 }
 
-header {
-    
-}
-
 /* Class Selectors */
 .main-grid {
     display: grid;
@@ -47,14 +43,6 @@ header {
     grid-template-columns: repeat(4, 1fr);
     background: linear-gradient(to bottom, #57F900, white );
 } 
-.nav-grid::after {
-    background: linear-gradient(transparent 100%, white 0%);
-}
-
-.nav-grid::before {
-    
-}
-
 
 .nav-icon {
     margin: 7px 0;
@@ -76,7 +64,7 @@ header {
 .profile {
     display: flex;
     text-align: center;
-    margin; auto;
+    margin: auto;
 
 }
 .profile-pic {

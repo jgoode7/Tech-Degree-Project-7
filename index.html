@@ -208,7 +208,34 @@
             </section>
 
             <!--Message User Section-->
-            
+
+            <section class="message">
+                <h3> Message User</h3>
+
+                <form class="widget container">
+                    <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                    <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                    <button class="button-primary" id="send">Send</button>
+                </form>
+            </section>
+
+            <section class="settings">
+                <h3>Settings</h3>
+
+                <!--Insert Toggle Buttons with CSS Here-->
+                <!--Insert Toggle Buttons with CSS Here-->
+
+                <select class="form-field" id="timezone">
+                    <option disabled selected>Select a Timezone</option>
+                    <option>Eastern</option>
+                   
+                    <!-- more options -->
+                </select>
+                <div class="settings-button">
+                    <button class="button-primary" id="save">Save</button>
+                    <button class="button-disabled" id="cancel">Cancel</button>
+                </div>
+            </section>
         </main>
         <script src="js/app.js"></script>
     </body>

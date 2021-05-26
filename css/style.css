@@ -202,3 +202,18 @@ svg {
     color: black;
     border-radius: 7px;
 }
+
+select {
+    padding-left: 5px;
+    font-family: copperplate;
+}
+
+input::placeholder {
+    padding-left: 5px;
+    font-family: copperplate;
+}
+
+textarea::placeholder {
+    padding: 10px 5px;
+    font-family: copperplate;
+}

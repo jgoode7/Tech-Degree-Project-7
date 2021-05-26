@@ -6,6 +6,11 @@
   }
 
 /* Layout Styles */
+
+body {
+    font-family: 'Mate SC', serif;
+}
+
 main {
     grid-area: main;
     padding: 0 25px;
@@ -24,7 +29,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Mate SC', serif;
     margin: 3px 5px 10px 0;
 }
 
@@ -33,7 +37,6 @@ h3 {
 }
 
 h3, ol {
-    font-family: 'Mate SC', serif;
 }
 
 ul {
@@ -75,7 +78,7 @@ textarea::placeholder {
 }
 
 header {
-    display: grid;
+    display: flex;
     justify-content: space-between;
     grid-area: header;
     height: 10vh;
@@ -84,21 +87,13 @@ header {
     
 }
 
-.bell {
-    margin: 18px -18px 0 0;
-    height: 20px;
-    width: 22px;
-}
-
 .navigation {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     grid-area: navigation;
-    text-align: center;
     padding: 0 30px;
     height: 7vh;
     background-color: #57F900;
-    background: linear-gradient(to bottom, #B5F792, #57F900);
-    grid-template-columns: repeat(4, 1fr);
 } 
 
 .nav-icon {
@@ -106,28 +101,33 @@ header {
     height: 25px;
     width: 25px;
 }
-.nav-icons {
+
+.notifications {
     display: flex;
     flex-direction: row;
 }
-.notifications {
-    text-align: center;
+
+.bell {
+    margin: 20px 5px 0 0;
+    height: 20px;
+    width: 22px;
 }
 
 .divider {
-    font-size: 40px;
+    font-size: 45px;
     opacity: .4;
-    margin: 3px 15px 0 0;
+    margin: 0 3px 7px 0;
     color: darkgreen;
 }
 
 .profile {
     display: flex;
-    text-align: center;
+    justify-content: center;
 
 }
+
 .profile-pic {
-    margin: 7px 5px 0 2px;
+    margin: 9px 5px 0 2px;
     border-radius: 50%;
     height: 6vh;
 }
@@ -135,7 +135,7 @@ header {
 .student-name {
     font-size: 12px;
     overflow: none;
-    margin: 17px 5px 0 7px;
+    margin: 22px 5px 0 7px;
 }
 
 
@@ -225,7 +225,7 @@ select {
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
-
+        grid-template-rows: auto;
         grid-template-areas: 
             "header header"
             "navigation main";
@@ -234,11 +234,14 @@ select {
         height: auto;
     }
     .navigation {
+        justify-content: flex-start;
         height: auto;
+        padding: 10px 15px;
         background: linear-gradient(to top, #B5F792, #57F900);
-    }
-    .nav-icons {
         flex-direction: column;
+    }
+    .nav-icon {
+        margin: 15px 0;
     }
 
 }

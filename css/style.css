@@ -267,9 +267,11 @@ select {
         background: linear-gradient(to top, #B5F792, #57F900);
         flex-direction: column;
     }
+
     .nav-icon {
         margin: 15px 0;
     }
+
     .main {
         grid-template-columns: 50%;
     }
@@ -277,24 +279,34 @@ select {
     .traffic-heading {
         display: flex;
     }
+
     .traffic-nav {
         margin-left: auto;
 }
     .traffic-nav li {
         padding: 0 10px;
-    }
 }
-
-    .main-heading, .alert, .traffic, .social, .members, .message, .activity, .settings {
+    .main-heading, .alert, .traffic, .social-stats, .members, .message, .activity, .settings {
         grid-column: 1 / span 2;
     }
+
     .daily {
         grid-column: 1 / span 1;
     }
+
     .doughnut {
         grid-column: 2 / span 1;
     }
+
+    .social-boxes {
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-container {
+        padding-right: 7px;
+    }
 }
+
 
 @media (min-width: 1024px) {
     .traffic, .social {
@@ -306,5 +318,4 @@ select {
     .doughnut, .activity, .settings {
         grid-column: 2 / span 1;
     }
-
 }

@@ -93,6 +93,7 @@ header {
     width: 100%;
     height: 60px;
     border: #C6C7C6 solid 3px;
+    border-top: none;
     border-right: none;
     margin-top: -10px;
     margin-left: 10px;

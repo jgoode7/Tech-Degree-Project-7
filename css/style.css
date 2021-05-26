@@ -8,6 +8,7 @@
 /* Layout Styles */
 main {
     grid-area: main;
+    display: grid;
     margin: 0 10px;
 }
 
@@ -80,6 +81,7 @@ textarea::placeholder {
     background-color: #B5F792;
     border-bottom: darkgreen solid 1px;
 }
+
 .bell {
     margin: 18px -18px 0 0;
     height: 20px;
@@ -132,6 +134,7 @@ textarea::placeholder {
     margin: 17px 5px 0 7px;
 }
 
+
 .main-heading {
     display: flex;
     margin: 0 0 5em 0;
@@ -140,8 +143,7 @@ textarea::placeholder {
 
 .main-heading input {
     justify-content: flex-end;
-    flex: 1;
-    width: 100%;
+    
     margin: 0 0 0 12px; 
     height: 2.8rem;
     border-top: none;
@@ -224,4 +226,15 @@ select {
     font-family: copperplate;
 }
 
+/* Media Queries */
 
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+            "header header"
+            "navigation main";
+    }
+
+
+}

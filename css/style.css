@@ -86,7 +86,17 @@ header {
     background-color: #B5F792;
     
 }
-
+.dashboard-container {
+    display: block;
+}
+.dashboard-box {
+    width: 100%;
+    height: 60px;
+    border: #C6C7C6 solid 3px;
+    border-right: none;
+    margin-top: -10px;
+    margin-left: 10px;
+}
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -141,7 +151,7 @@ header {
 
 .main-heading {
     display: flex;
-    margin: 0 0 5em 0;
+    margin: 10px 0 30px 0;
 }
 
 
@@ -220,6 +230,21 @@ select {
     font-family: copperplate;
 }
 
+#alert {
+    background-color: #57F900;
+    border-radius: 5px;
+    height: 35px;
+    width: 98%;
+}
+.alert-banner {
+    display: flex;
+    margin: 8px 0 0 8px;
+}
+
+.alert-banner-close {
+    margin-left: auto;
+    padding-right: 3px;
+}
 /* Media Queries */
 
 @media (min-width: 768px) {
@@ -233,6 +258,7 @@ select {
     header {
         height: auto;
     }
+
     .navigation {
         justify-content: flex-start;
         height: auto;
@@ -242,6 +268,42 @@ select {
     }
     .nav-icon {
         margin: 15px 0;
+    }
+    .main {
+        grid-template-columns: 50%;
+    }
+
+    .traffic-heading {
+        display: flex;
+    }
+    .traffic-nav {
+        margin-left: auto;
+}
+    .traffic-nav li {
+        padding: 0 10px;
+    }
+}
+
+    .main-heading, .alert, .traffic, .social, .members, .message, .activity, .settings {
+        grid-column: 1 / span 2;
+    }
+    .daily {
+        grid-column: 1 / span 1;
+    }
+    .doughnut {
+        grid-column: 2 / span 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .traffic, .social {
+        grid-column: 1 / span 2;
+    }
+    .daily, .members, .message {
+        grid-column: 1 / span 1;
+    }
+    .doughnut, .activity, .settings {
+        grid-column: 2 / span 1;
     }
 
 }

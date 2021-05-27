@@ -81,7 +81,7 @@ header {
     display: flex;
     justify-content: space-between;
     grid-area: header;
-    height: 10vh;
+    height: 55px;
     grid-template-columns: 1.5fr 1fr 2fr;
     background-color: #B5F792;
     
@@ -103,7 +103,7 @@ header {
     justify-content: space-between;
     grid-area: navigation;
     padding: 0 30px;
-    height: 7vh;
+    height: 45px;
     background-color: #57F900;
 } 
 
@@ -125,9 +125,9 @@ header {
 }
 
 .divider {
-    font-size: 45px;
+    font-size: 42px;
     opacity: .4;
-    margin: 0 3px 7px 0;
+    margin: 0 3px 10px 0;
     color: darkgreen;
 }
 
@@ -181,6 +181,10 @@ header {
     border-bottom: solid 1px #C6C7C6;
     padding: 15px 0;
     text-align: center;
+}
+
+.link-recent {
+    display: none;
 }
 
 .profile-image {
@@ -239,13 +243,30 @@ select {
 }
 .alert-banner {
     display: flex;
-    margin: 8px 0 0 8px;
+    font-size: 12px;
+    margin: 11px 0 0 8px;
 }
 
 .alert-banner-close {
     margin-left: auto;
     padding-right: 3px;
 }
+
+.widget-container-full, .widget-container-half {
+    margin: 1.2rem 1.5rem;
+    width: 85vw;
+}
+.traffic-heading {
+    display: flex;
+}
+
+.traffic-nav {
+    margin-left: auto;
+    font-size: 10px;
+}
+.traffic-nav li {
+    padding: 15px 5px;
+}    
 /* Media Queries */
 
 @media (min-width: 768px) {
@@ -280,13 +301,10 @@ select {
         display: flex;
     }
 
-    .traffic-nav {
-        margin-left: auto;
-}
     .traffic-nav li {
         padding: 0 10px;
 }
-    .main-heading, .alert, .traffic, .social-stats, .members, .message, .activity, .settings {
+    .main-heading, .alert, .traffic, .social-stats, .members, .message, .recent, .settings {
         grid-column: 1 / span 2;
     }
 
@@ -302,8 +320,32 @@ select {
         display: flex;
         justify-content: space-between;
     }
+
     .social-container {
         padding-right: 7px;
+    }
+
+    .members-container {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .members-text, .recent-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .date {
+        margin-left: auto;
+    }
+
+    .link-recent {
+        display: flex;
+        margin-left: auto;
+        font-size: 1.5rem;
     }
 }
 
@@ -315,7 +357,7 @@ select {
     .daily, .members, .message {
         grid-column: 1 / span 1;
     }
-    .doughnut, .activity, .settings {
+    .doughnut, .recent, .settings {
         grid-column: 2 / span 1;
     }
 }

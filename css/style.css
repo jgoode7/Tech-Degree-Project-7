@@ -6,15 +6,13 @@
   }
 
 /* Layout Styles */
-
 body {
     font-family: 'Mate SC', serif;
 }
 
 main {
     grid-area: main;
-    padding: 0 25px;
-    display: grid;
+    padding: 0 15px;
 }
 
 section {
@@ -82,7 +80,6 @@ header {
     justify-content: space-between;
     grid-area: header;
     height: 55px;
-    grid-template-columns: 1.5fr 1fr 2fr;
     background-color: #B5F792;
     
 }
@@ -138,7 +135,7 @@ header {
 }
 
 .profile-pic {
-    margin: 9px 5px 0 2px;
+    margin: 14px 5px 0 5px;
     border-radius: 50%;
     height: 6vh;
 }

@@ -83,3 +83,55 @@ let dailyChart = new Chart(dailyCanvas, {
     data: dailyData,
     options: dailyOptions
 });
+
+// Doughnut Chart
+
+const mobileCanvas = document.getElementById('mobileRoundChart');
+
+const mobileData = {
+    labels: ['Desktop', 'Tablet', 'Phones'],
+    datasets: [{
+        label: '# of Users',
+        data: [2000, 550, 500],
+        borderWidth: 0,
+        backgroundColor: [
+            '#7477BF',
+            '#78CF82',
+            '#51B6C8'
+        ]
+    }]
+};
+
+const mobileOptions = {
+    plugins: {
+        legend: {
+            position: 'right',
+            lebels: {
+                boxWidth: 20,
+                fontStyle: 'bold'
+            }
+        }
+    }
+};
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+});
+
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+send.addEventListener('click', () => {
+    if(user.value === "" && message.value === "") {
+        alert("Please fill out user and message fields before sending");
+    } else if (user.value === "" ) {
+        alert("Please fill out user field before sending");
+    } else if (message.value === "" ) {
+        alert("Please fill out the message field before sending");
+    } else {
+        alert(`Message succesfully sent to: ${user.value}`)
+    }
+})

@@ -10,6 +10,10 @@ body {
     font-family: 'Mate SC', serif;
 }
 
+.main-grid {
+    display: grid;
+}
+
 main {
     grid-area: main;
     padding: 0 15px;
@@ -31,10 +35,7 @@ h2 {
 }
 
 h3 {
-    margin: 5px 0;
-}
-
-h3, ol {
+    margin: 15px 0 0 0;
 }
 
 ul {
@@ -149,9 +150,8 @@ header {
 
 .main-heading {
     display: flex;
-    margin: 10px 0 30px 0;
+    margin: 10px -15px 20px 0;
 }
-
 
 .social-container {
     display: flex;
@@ -166,8 +166,8 @@ header {
 .social-image {
     flex-direction: row;
     margin: 0 15px;
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
 }
     
 .social-text {
@@ -238,10 +238,15 @@ select {
     height: 35px;
     width: 98%;
 }
+
 .alert-banner {
     display: flex;
     font-size: 12px;
-    margin: 11px 0 0 8px;
+    margin: 0 0 0 8px;
+}
+
+.alert-text {
+    margin-top: 10px;
 }
 
 .alert-banner-close {
@@ -249,19 +254,22 @@ select {
     padding-right: 3px;
 }
 
-.widget-container-full, .widget-container-half {
-    margin: 1.2rem 1.5rem;
-    width: 85vw;
+.widget-container-full, .widget-container-half, .mobile-chart{
+    margin: 0 0 15px 0;
+    padding: 20px 5px;
+    width: 90vw;
 }
+
 .traffic-heading {
     display: flex;
 }
 
 .traffic-nav {
     margin-left: auto;
-    font-size: 10px;
+    padding: 10px 20px 0 0;
 }
 .traffic-nav li {
+    font-size: 12px;
     padding: 15px 5px;
 }    
 /* Media Queries */
@@ -284,6 +292,9 @@ select {
         padding: 10px 15px;
         background: linear-gradient(to top, #B5F792, #57F900);
         flex-direction: column;
+    }
+    section.traffic {
+        border-bottom: none;
     }
 
     .nav-icon {
@@ -316,9 +327,25 @@ select {
     .social-boxes {
         display: flex;
         justify-content: space-between;
+        
+    }
+    .doughnut, .daily {
+        border: solid 1px #C6C7C6;
+    }
+
+    .daily {
+        border-left: none;
+        border-right: none;
+        padding-right: 10px;
+    }
+
+    .doughnut {
+        padding-left: 10px;
+        border-right: none;
     }
 
     .social-container {
+        width: 30vw;
         padding-right: 7px;
     }
 
@@ -344,11 +371,16 @@ select {
         margin-left: auto;
         font-size: 1.5rem;
     }
+    .widget-container-half, .mobile-chart{
+        margin: 0 0 15px 0;
+        padding: 20px 5px;
+        width: 45vw;
+    }
 }
 
 
 @media (min-width: 1024px) {
-    .traffic, .social {
+    .traffic, .social-stats {
         grid-column: 1 / span 2;
     }
     .daily, .members, .message {

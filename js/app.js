@@ -199,5 +199,3 @@ window.addEventListener('mouseup', function(event) {
       DropdownClose.style.display = "none";
     }
 });
-
-let autoMember = ['Joe Goode', 'Victoria Chambers', 'Dan Oliver', 'Dawn Wood'];

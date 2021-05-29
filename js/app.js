@@ -185,3 +185,19 @@ send.addEventListener('click', () => {
         alert(`Message succesfully sent to: ${user.value}`)
     }
 })
+
+let bellNotification = document.querySelector('.bell');
+let dropdown = document.querySelector('.dropdown-content');
+
+bellNotification.addEventListener('click', function() {
+    dropdown.style.display = 'flex';
+});
+
+window.addEventListener('mouseup', function(event) {
+    let DropdownClose = document.querySelector('.dropdown-content');
+    if(event.target != DropdownClose) {
+      DropdownClose.style.display = "none";
+    }
+});
+
+let autoMember = ['Joe Goode', 'Victoria Chambers', 'Dan Oliver', 'Dawn Wood'];

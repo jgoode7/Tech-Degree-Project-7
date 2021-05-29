@@ -54,13 +54,32 @@ svg {
 }
 
 input::placeholder {
-    padding-left: 5px;
+    padding-left: 10px;
     font-family: copperplate;
 }
 
 textarea::placeholder {
-    padding: 10px 5px;
+    padding: 10px 10px;
     font-family: copperplate;
+}
+
+.toggle1, .toggle2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.switch-light {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.toggle-switch {
+    width: 40%;
+}
+.toggle2 .toggle-switch {
+    margin-left: 35px;
 }
 
 /* Class Selectors */
@@ -82,11 +101,12 @@ header {
     grid-area: header;
     height: 55px;
     background-color: #B5F792;
-    
 }
+
 .dashboard-container {
     display: block;
 }
+
 .dashboard-box {
     width: 100%;
     height: 60px;
@@ -96,6 +116,7 @@ header {
     margin-top: -10px;
     margin-left: 10px;
 }
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -122,6 +143,17 @@ header {
     width: 22px;
 }
 
+svg.bell-icon {
+    stroke: black;
+    fill: darkgreen;
+}
+
+.bell:hover {
+    fill: black;
+    transition: ease-in 0.5s;
+    transform: rotate(360deg);
+}
+
 .divider {
     font-size: 42px;
     opacity: .4;
@@ -136,7 +168,7 @@ header {
 }
 
 .profile-pic {
-    margin: 14px 5px 0 5px;
+    margin: 10px 5px 0 5px;
     border-radius: 50%;
     height: 6vh;
 }
@@ -178,6 +210,10 @@ header {
     border-bottom: solid 1px #C6C7C6;
     padding: 15px 0;
     text-align: center;
+}
+
+.members-container:last-child {
+    border-bottom: none;
 }
 
 .link-recent {
@@ -301,6 +337,10 @@ select {
         margin: 15px 0;
     }
 
+    canvas {
+        max-height: 350px;
+    }
+
     .main {
         grid-template-columns: 50%;
     }
@@ -312,7 +352,14 @@ select {
     .traffic-nav li {
         padding: 0 10px;
 }
-    .main-heading, .alert, .traffic, .social-stats, .members, .message, .recent, .settings {
+    .main-heading, 
+    .alert, 
+    .traffic, 
+    .social-stats, 
+    .members, 
+    .message, 
+    .recent, 
+    .settings {
         grid-column: 1 / span 2;
     }
 
@@ -327,6 +374,7 @@ select {
     .social-boxes {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
         
     }
     .doughnut, .daily {
@@ -376,6 +424,10 @@ select {
         padding: 20px 5px;
         width: 45vw;
     }
+    .message { 
+        border-top: none;
+    }
+
 }
 
 
@@ -383,10 +435,53 @@ select {
     .traffic, .social-stats {
         grid-column: 1 / span 2;
     }
+
     .daily, .members, .message {
         grid-column: 1 / span 1;
     }
+
     .doughnut, .recent, .settings {
         grid-column: 2 / span 1;
+    }
+
+    .members, .recent {
+        border-bottom: none;
+    }
+
+    .message {
+        padding-right: 10px;
+        border-top: solid 1px #C6C7C6;
+        border-bottom: none;
+        border-right: solid 1px #C6C7C6;
+    }
+
+    .settings {
+        border-top: solid 1px #C6C7C6;
+        padding: 0 10px;
+        border-bottom: none;
+    }
+
+    .settings-button {
+        margin-top: 3px;
+    }
+
+    .members-container {
+        padding: 0 10px 10px 10px;
+    }
+
+    .members {
+        margin-top: 0;
+        border-right: solid 1px #C6C7C6;;
+    }
+
+    .recent {
+        margin-top: 0;
+    }
+
+    .recent h3 {
+        padding-left: 5px;
+    }
+    .message, .settings {
+        margin-top: 0;
     }
 }

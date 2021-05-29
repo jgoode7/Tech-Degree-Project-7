@@ -19,6 +19,11 @@ alertBanner.addEventListener('click', e => {
 
 const trafficCanvas = document.getElementById('trafficChart');
 
+let hourlyIcon = document.getElementById('hourlyLink');
+let dailyIcon = document.querySelector('#dailyLink');
+let weeklyIcon = document.getElementById('weeklyLink');
+let monthlyIcon = document.getElementById('monthlyLink');
+
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -50,7 +55,52 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData,
     options: trafficOptions
 });
+ 
+// Event Listeners for Nav Links
 
+hourlyIcon.addEventListener('click', function(event) {
+    event.preventDefault();
+    dailyIcon.classList.remove('active');
+    hourlyIcon.classList.add('active');
+    weeklyIcon.classList.remove('active');
+    monthlyIcon.classList.remove('active');
+    trafficChart.data.datasets[0].data = [600, 780, 1300, 1200, 1900, 1000, 1400, 1550];
+    trafficChart.data.labels = ["7-8", "8-9", "9-10", "10-11", "11-12", "1-2", "2-3", "3-4"]
+    trafficChart.update();
+});
+
+dailyIcon.addEventListener('click', function(event) {
+    event.preventDefault();
+    dailyIcon.classList.add('active');
+    hourlyIcon.classList.remove('active');
+    weeklyIcon.classList.remove('active');
+    monthlyIcon.classList.remove('active');
+    trafficChart.data.datasets[0].data = [0, 150, 1300, 900, 300, 230, 900];
+    trafficChart.data.labels = ["7-8", "8-9", "9-10", "10-11", "11-12", "1-2", "2-3"]
+    trafficChart.update();
+});
+
+weeklyIcon.addEventListener('click', function(event) {
+    event.preventDefault();
+    dailyIcon.classList.remove('active');
+    hourlyIcon.classList.remove('active');
+    weeklyIcon.classList.add('active');
+    monthlyIcon.classList.remove('active');
+    trafficChart.data.datasets[0].data = [1000, 200, 430, 200, 1000, 1500, 2200];
+    trafficChart.data.labels = ["Week 8", "Week 9", "Week 10", "Week 11", "Week 12", "Week 13", "Week 14"]
+    trafficChart.update();
+});
+
+monthlyIcon.addEventListener('click', function(event) {
+    event.preventDefault();
+    dailyIcon.classList.remove('active');
+    hourlyIcon.classList.remove('active');
+    weeklyIcon.classList.remove('active');
+    monthlyIcon.classList.add('active');
+    trafficChart.data.datasets[0].data = [600, 780, 1300, 1200, 1900, 1000, 1400];
+    trafficChart.data.labels = ["Jan", "Feb", "March", "April", "May", "June", "July"]
+    trafficChart.update();
+});
 
 // Bar Graph 
 

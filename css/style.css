@@ -10,8 +10,12 @@ body {
     font-family: 'Mate SC', serif;
 }
 
-.main-grid {
-    display: grid;
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    height: 55px;
+    background-color: #B5F792;
 }
 
 main {
@@ -22,6 +26,11 @@ main {
 section {
     margin-top: 10px;
     border-bottom: solid 1px #C6C7C6;   
+}
+
+select {
+    padding-left: 5px;
+    font-family: copperplate;
 }
 
 h1 {
@@ -53,6 +62,10 @@ svg {
     fill: #57F900;
 }
 
+canvas {
+    max-height: 350px;
+}
+
 input::placeholder {
     padding-left: 10px;
     font-family: copperplate;
@@ -63,23 +76,13 @@ textarea::placeholder {
     font-family: copperplate;
 }
 
-.toggle1, .toggle2 {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-}
+/* ID Selector */
 
-.switch-light {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-}
-.toggle-switch {
-    width: 40%;
-}
-.toggle2 .toggle-switch {
-    margin-left: 35px;
+#alert {
+    background-color: #57F900;
+    border-radius: 5px;
+    height: 35px;
+    width: 98%;
 }
 
 /* Class Selectors */
@@ -95,12 +98,8 @@ textarea::placeholder {
         "main";
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    grid-area: header;
-    height: 55px;
-    background-color: #B5F792;
+.main-grid {
+    display: grid;
 }
 
 .dashboard-container {
@@ -140,7 +139,6 @@ header {
 .dropdown {
     position: relative;
     display: block;
-    
 }
 
 .dropdown-content {
@@ -185,10 +183,6 @@ svg.bell-icon {
     border-radius: 50%;
     background: red;
     color: white;
-}
-
-canvas {
-    max-height: 350px;
 }
 
 .bell:hover {
@@ -274,6 +268,7 @@ canvas {
     border-radius: 50%;
     height: 12vh;
 }
+
 .form-field {
     height: 3em;
 }
@@ -293,6 +288,28 @@ canvas {
 .awesomplete {
     display: block;
 }
+
+.toggle1, .toggle2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.switch-light {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.toggle-switch {
+    width: 40%;
+}
+
+.toggle2 .toggle-switch {
+    margin-left: 35px;
+}
+
 .button-primary {
     width: 100%;
     height: 8vh;
@@ -306,6 +323,7 @@ canvas {
     display: flex;
     flex-wrap: nowrap;
 }
+
 .button-disabled {
     width: 100%;
     height: 8vh;
@@ -314,18 +332,6 @@ canvas {
     background-color: #C6C7C6;
     color: black;
     border-radius: 7px;
-}
-
-select {
-    padding-left: 5px;
-    font-family: copperplate;
-}
-
-#alert {
-    background-color: #57F900;
-    border-radius: 5px;
-    height: 35px;
-    width: 98%;
 }
 
 .alert-banner {

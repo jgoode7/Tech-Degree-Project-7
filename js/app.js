@@ -1,3 +1,5 @@
+// Alert Banner
+
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = 
@@ -15,7 +17,7 @@ alertBanner.addEventListener('click', e => {
 });
 
 
-// Line Graph
+// Line Graph with Clickable Link Variables
 
 const trafficCanvas = document.getElementById('trafficChart');
 
@@ -170,6 +172,8 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
+// Message Section & Listener
+
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
@@ -184,7 +188,9 @@ send.addEventListener('click', () => {
     } else {
         alert(`Message succesfully sent to: ${user.value}`)
     }
-})
+});
+
+//Header Alert Notifications and Dropdown Menu
 
 let bellNotification = document.querySelector('.bell');
 let dropdown = document.querySelector('.dropdown-content');
@@ -201,6 +207,7 @@ window.addEventListener('mouseup', function(event) {
 });
 
 // Local Storage- Save
+
 let togglebtn1 = document.getElementById('tog1');
 let togglebtn2 = document.getElementById('tog2');
 let timezone = document.getElementById('timezone');

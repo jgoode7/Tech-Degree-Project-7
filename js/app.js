@@ -199,3 +199,45 @@ window.addEventListener('mouseup', function(event) {
       DropdownClose.style.display = "none";
     }
 });
+
+// Local Storage- Save
+let togglebtn1 = document.getElementById('tog1');
+let togglebtn2 = document.getElementById('tog2');
+let timezone = document.getElementById('timezone');
+let settings = document.getElementById('settings');
+
+function saveSelected() {
+    localStorage.setItem('tog1', togglebtn1.checked);
+    localStorage.setItem('tog2', togglebtn2.checked);
+    localStorage.setItem('timezone', timezone.selectedIndex);
+};
+
+// Save & Cancel Listener
+
+settings.addEventListener('click', e => {
+    if (e.target.id === 'save') {
+        saveSelected();
+    } else if (e.target.id === 'cancel') {
+        localStorage.clear();
+        togglebtn1.checked = false;
+        togglebtn2.checked = false;
+        timezone.selectedIndex = [0];
+    }
+});
+
+//Reloading Selected Settings
+
+function loadSelected() {
+    let checked1 = JSON.parse(localStorage.getItem('tog1'));
+    let checked2 = JSON.parse(localStorage.getItem('tog2'));
+    let getTimezone = JSON.parse(localStorage.getItem('timezone'));
+    if (checked1) {
+        togglebtn1.checked = checked1;
+    } if (checked2) {
+        togglebtn2.checked = checked2;
+    } if (getTimezone) {
+        timezone.selectedIndex = getTimezone;
+    }
+}
+
+loadSelected();

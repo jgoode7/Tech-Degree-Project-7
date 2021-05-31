@@ -166,7 +166,7 @@ header {
 }
 
 .bell {
-    margin: 5px 5px 0 0;
+    margin: 0 5px 0 0;
     height: 20px;
     width: 22px;
 }
@@ -179,9 +179,9 @@ svg.bell-icon {
 .badge {
     position: relative;
     font-size: 10px;
-    top: -3px;
-    right: -10px;
-    padding: 5px 10px;
+    top: 0;
+    right: -15px;
+    padding: 0.025rem 0.25rem;
     border-radius: 50%;
     background: red;
     color: white;
@@ -239,11 +239,18 @@ canvas {
 
 .social-image {
     flex-direction: row;
-    margin: 0 15px;
+    margin: 4px 13px 0 13px;
     height: 45px;
     width: 45px;
 }
-    
+   
+.social-image-backgnd {
+    margin: 0 5px;
+    padding: 12px 3px;
+    background: black;
+    border-radius: 50%;
+}
+
 .social-text {
     font-size: 1.5em;
 }
@@ -359,9 +366,11 @@ select {
 }   
 .active {
     background-color: #57F900;
+    color: purple;
+    text-shadow: white 1px 1px;
     margin-top: 5px;
     width: 65px;
-    border-radius: 25px;
+    border-radius: 45px;
 }
 
 .widget-container {
@@ -405,9 +414,6 @@ select {
         display: flex;
     }
 
-    .traffic-nav li {
-        padding: 0 10px;
-}
     .main-heading, 
     .alert, 
     .traffic, 

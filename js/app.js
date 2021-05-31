@@ -66,8 +66,8 @@ hourlyIcon.addEventListener('click', function(event) {
     hourlyIcon.classList.add('active');
     weeklyIcon.classList.remove('active');
     monthlyIcon.classList.remove('active');
-    trafficChart.data.datasets[0].data = [600, 780, 1300, 1200, 1900, 1000, 1400, 1550];
-    trafficChart.data.labels = ["7-8", "8-9", "9-10", "10-11", "11-12", "1-2", "2-3", "3-4"]
+    trafficChart.data.datasets[0].data = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+    trafficChart.data.labels = ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"]
     trafficChart.update();
 });
 
